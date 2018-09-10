@@ -21,9 +21,15 @@
     <ClCompile Include="TreeNode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Queue_point.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue_point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
