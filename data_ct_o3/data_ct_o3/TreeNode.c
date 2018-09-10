@@ -11,6 +11,7 @@ TreeNode * createBST()
 	{
 		printf("for exit enter -1 \n number=");
 		scanf_s("%d", &num);
+		printf("\n your input is: %d", num);
 		if (num != -1)
 			tree = insertValueToBST(tree, num);
 	}
@@ -101,11 +102,13 @@ void printInorder(TreeNode * root)
 }
 void freeBST(TreeNode* root)
 {
-	if (root != NULL)
-	{
-		freeBST(root->left); freeBST(root->right);
-		free(root);
-	}
+	if (root == NULL)
+		return;
+	freeBST(root->left);
+	freeBST(root->right);
+	free(root);
+	
+
 }
 void printByLevel(TreeNode* root) {
 
@@ -120,17 +123,17 @@ void printByLevel(TreeNode* root) {
 	}
 	// put in queue
 	enqueue(temp, q);
-	
+
 	// run till has records
 	while (dequeue(q, &temp) == 1)
 	{
-
+		// print current root
 		printf("%d,", temp->data);
 
 		// put left child if has 
 		if (temp->left != NULL)
 			enqueue(temp->left, q);
-		
+
 		// put right child if has 
 		if (temp->right != NULL)
 			enqueue(temp->right, q);

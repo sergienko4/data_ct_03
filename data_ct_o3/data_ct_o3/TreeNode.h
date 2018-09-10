@@ -11,7 +11,6 @@ typedef struct treenode
 	struct treenode *parent;
 }TreeNode;
 
-
 TreeNode * createTreeNode(type_data);
 TreeNode * createBST();
 TreeNode * insertValueToBST(TreeNode *root, type_data data);
